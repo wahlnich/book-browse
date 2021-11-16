@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
+import './App.css';
+
+import Modal from './components/modal/Modal';
 import Book from './components/book/Book';
 
 function App() {
-  return <Book name="Priory of the Orange Tree" author="Samantha Shannon" />;
+  let [displayModal, setDisplayModal] = useState(true);
+
+  return (
+    <div className="bg-image">
+      {displayModal && <Modal />}
+      <Book name="Priory of the Orange Tree" author="Samantha Shannon" />
+    </div>
+  );
 }
 
 export default App;
