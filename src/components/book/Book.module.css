@@ -1,0 +1,14 @@
+.book {
+  margin: auto;
+  border-style: solid;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  display: normal;
+  text-align: center;
+}
+
+.book img {
+  width: 100%;
+  height: 500px;
+}
