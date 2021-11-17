@@ -1,0 +1,9 @@
+.close-button {
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  position: absolute;
+  top: 15px;
+  right: 40px;
+}

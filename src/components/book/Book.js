@@ -4,11 +4,12 @@ import image from '../../assets/dummyCover.jpg';
 
 function Book(props) {
   return (
-    <div className={classes.book}>
+    <div onClick={props.onShowModal} className={classes.book}>
       <div>
         <img src={image} alt="Priory of the orange tree" />
-        <h1>{props.name}</h1>
-        <h2>{props.author}</h2>
+        <h1>{props.dummyData.title}</h1>
+        <h2>{props.dummyData.author}</h2>
+        {/*<button onClick={props.onShowModal}>Click to Show Modal</button>*/}
       </div>
     </div>
   );
