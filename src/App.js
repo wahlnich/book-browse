@@ -5,6 +5,7 @@ import Modal from './components/modal/Modal';
 import Book from './components/book/Book';
 
 function App() {
+  // using fake data until i add API integration
   const dummyData = [
     {
       title: 'Priory of the Orange Tree',
@@ -14,29 +15,30 @@ function App() {
     },
   ];
 
+  // Decide when to show the modal
   let [displayModal, setDisplayModal] = useState(false);
 
   const showModal = () => {
     setDisplayModal(true);
-    console.log(displayModal);
   };
 
-  // closing depends on the previous state
   const closeModal = () => {
     setDisplayModal(false);
   };
 
   return (
-    <div className="bg-image">
-      {displayModal && (
-        <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
-      )}
-      <Book
-        onShowModal={showModal}
-        onCloseModal={closeModal}
-        dummyData={dummyData[0]}
-        displayModal={displayModal}
-      />
+    <div>
+      {
+        // Show modal only when modal is true
+        // pass dummydata to render the modal.
+        // pass closeModal so it can close itself
+        displayModal && (
+          <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
+        )
+      }
+      {/*Render book. Pass showModal so it shows it when modal is clicked on.
+         Pass data for rendering*/}
+      <Book onShowModal={showModal} dummyData={dummyData[0]} />
     </div>
   );
 }

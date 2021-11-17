@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Book.module.css';
 import image from '../../assets/dummyCover.jpg';
 
+// props received are dummyData and onShowModal
 function Book(props) {
   return (
     <div onClick={props.onShowModal} className={classes.book}>
