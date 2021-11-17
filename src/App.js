@@ -16,14 +16,17 @@ function App() {
   ];
 
   // Decide when to show the modal
-  let [displayModal, setDisplayModal] = useState(false);
+  let [displayModal, setDisplayModal] = useState({
+    display: false,
+    index: null,
+  });
 
-  const showModal = () => {
-    setDisplayModal(true);
+  const showModal = (book) => {
+    setDisplayModal({display: true, index: null});
   };
 
   const closeModal = () => {
-    setDisplayModal(false);
+    setDisplayModal({display: false, index: null});
   };
 
   return (
@@ -32,7 +35,7 @@ function App() {
         // Show modal only when modal is true
         // pass dummydata to render the modal.
         // pass closeModal so it can close itself
-        displayModal && (
+        displayModal.display && (
           <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
         )
       }
