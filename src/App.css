@@ -3,6 +3,8 @@
 html {
   background-size: cover;
   background-image: url('./assets/bookshelves.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   padding: 0;
