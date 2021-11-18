@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 
+import Header from './components/navigation/Header';
+import Body from './components/UI/Body';
 import Modal from './components/modal/Modal';
 import Book from './components/book/Book';
 
@@ -39,19 +41,26 @@ function App() {
     setDisplayModal({display: false, index: null});
   };
 
+  const renderBooks = (booksArray) => {};
+
   return (
-    <div>
-      {
-        // Show modal only when modal is true
-        // pass dummydata to render the modal.
-        // pass closeModal so it can close itself
-        displayModal.display && (
-          <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
-        )
-      }
-      {/*Render book. Pass showModal so it shows it when modal is clicked on.
+    <div className="full-site-container">
+      <Header />
+      <Body>
+        {
+          // Show modal only when modal is true
+          // pass dummydata to render the modal.
+          // pass closeModal so it can close itself
+          displayModal.display && (
+            <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
+          )
+        }
+        {/*Render book. Pass showModal so it shows it when modal is clicked on.
          Pass data for rendering*/}
-      <Book onShowModal={showModal} dummyData={dummyData[0]} />
+        <div slassName="books">
+          <Book onShowModal={showModal} dummyData={dummyData[0]} />
+        </div>
+      </Body>
     </div>
   );
 }

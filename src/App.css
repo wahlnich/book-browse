@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 html {
-  background-image: './assets/bookshelves.jpg';
-}
-
-body {
+  background-size: cover;
+  background-image: url('./assets/bookshelves.jpg');
   font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }

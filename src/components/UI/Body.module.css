@@ -1,0 +1,11 @@
+.content {
+  margin-top: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #963a2f;
+  max-width: 80%;
+  min-height: 100vh;
+  background-size: cover;
+  z-index: 1;
+  box-shadow: 0 0 3px 10px #963a2f;
+}
