@@ -65,9 +65,6 @@ function App() {
     setDisplayModal(false);
   };
 
-  // Book ID State
-  let [currentBook, setCurrentBook] = useState('');
-
   return (
     <div className="full-site-container">
       <Header />
@@ -76,8 +73,8 @@ function App() {
           // Show modal only when modal is true
           // pass dummydata to render the modal.
           // pass closeModal so it can close itself
-          displayModal.display && (
-            <Modal book={currentBook} onCloseModal={closeModal} />
+          displayModal && (
+            <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
           )
         }
         {/*Render book. Pass showModal so it shows it when modal is clicked on.
