@@ -1,14 +1,35 @@
 .book {
-  margin: auto;
-  border-style: solid;
-  border-radius: 10px;
-  width: fit-content;
+  border: 3px transparent;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 250px;
   padding: 10px;
   display: normal;
   text-align: center;
+  cursor: pointer;
+  word-wrap: break-word;
+  color: rgb(208, 208, 208);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
 .book img {
-  width: 100%;
-  height: 500px;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(213, 130, 88, 0.4);
+  box-shadow: -2px 4px 10px rgba(213, 130, 88, 0.4);
+  display: block;
+  max-width: 230px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book:hover {
+  border: 3px solid rgba(213, 130, 88, 0.4);
+  border-radius: 10px;
+  border-style: solid;
 }

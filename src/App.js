@@ -35,21 +35,38 @@ function App() {
       description: 'wheel of time',
       isbn: '9780312850098',
     },
+    {
+      title: 'Underlord',
+      author: 'Will Wight',
+      description:
+        'A tournament approaches. All around the world, great clans and sects prepare their disciples to fight against one another in a competition of young Underlords. Even the Blackflame Empire is drawn in, but their youth are not strong enough to compete. \\nYet.',
+      isbn: '9780999851128',
+    },
+    {
+      title: 'Soulsmith',
+      author: 'Will Wight',
+      description: `Outside Sacred Valley, ancient ruins rise from the earth, drawing sacred artists from miles around to fight for the treasures within.
+
+      Lindon has reached Copper, taking the first step on the road to power, but the warriors of the outside world are still far beyond him.
+      
+      To advance, he turns to the arcane skills of the Soulsmiths, who craft weapons from the stuff of souls. With new powers come new enemies, and Lindon soon finds himself facing an entire sect of Golds.`,
+      isbn: '9780989671774',
+    },
   ];
 
   // Decide when to show the modal
-  let [displayModal, setDisplayModal] = useState({
-    display: false,
-    id: null,
-  });
+  let [displayModal, setDisplayModal] = useState(false);
 
-  const showModal = (book) => {
-    setDisplayModal({display: true, id: book.isbn});
+  const showModal = () => {
+    setDisplayModal(true);
   };
 
   const closeModal = () => {
-    setDisplayModal({display: false, id: null});
+    setDisplayModal(false);
   };
+
+  // Book ID State
+  let [currentBook, setCurrentBook] = useState('');
 
   return (
     <div className="full-site-container">
@@ -60,7 +77,7 @@ function App() {
           // pass dummydata to render the modal.
           // pass closeModal so it can close itself
           displayModal.display && (
-            <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
+            <Modal book={currentBook} onCloseModal={closeModal} />
           )
         }
         {/*Render book. Pass showModal so it shows it when modal is clicked on.

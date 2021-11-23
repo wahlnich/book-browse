@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from './Book';
+import classes from './BooksList.module.css';
 
 export default function BooksList(props) {
   const booksList = props.booksData.map((book) => (
@@ -13,5 +14,5 @@ export default function BooksList(props) {
     />
   ));
 
-  return <div>{booksList}</div>;
+  return <div className={classes['books-list']}>{booksList}</div>;
 }

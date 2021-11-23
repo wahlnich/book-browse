@@ -13,7 +13,6 @@ function Book(props) {
         <img src={imageAPIString(props.isbn)} alt={props.title} />
         <h1>{props.title}</h1>
         <h2>{props.author}</h2>
-        {/*<button onClick={props.onShowModal}>Click to Show Modal</button>*/}
       </div>
     </div>
   );
