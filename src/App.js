@@ -29,6 +29,12 @@ function App() {
       description: `Awesome flying shapeshifting monster/human hybrids. Reverse gender roles brah!`,
       isbn: '978-1949102185',
     },
+    {
+      title: 'Wheel of Time',
+      author: 'Robert Jordan',
+      description: 'wheel of time',
+      isbn: '9780312850098',
+    },
   ];
 
   // Decide when to show the modal

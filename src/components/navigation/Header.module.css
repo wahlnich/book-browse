@@ -16,9 +16,23 @@
   position: relative;
 }
 
-.header h1 {
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header li {
   display: inline-block;
-  margin-left: 12em;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 1%;
 }
 
 html,
