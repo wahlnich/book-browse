@@ -7,8 +7,16 @@ function Book(props) {
     return `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`;
   };
 
+  // Onclick group
+  // set current book and display the modal
+  const clickHandler = () => {
+    console.log(props.isbn);
+    props.onSetCurrentBook(props.isbn);
+    props.onShowModal();
+  };
+
   return (
-    <div onClick={props.onShowModal} className={classes.book}>
+    <div onClick={clickHandler} className={classes.book}>
       <div>
         <img src={imageAPIString(props.isbn)} alt={props.title} />
         <h1>{props.title}</h1>

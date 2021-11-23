@@ -11,6 +11,7 @@ export default function BooksList(props) {
       author={book.author}
       description={book.description}
       onShowModal={props.onShowModal}
+      onSetCurrentBook={props.onSetCurrentBook}
     />
   ));
 

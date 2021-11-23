@@ -65,6 +65,18 @@ function App() {
     setDisplayModal(false);
   };
 
+  // set current book
+  let [currentBookISBN, setCurrentBook] = useState('');
+
+  const onSetCurrentBook = (book) => {
+    setCurrentBook(book);
+  };
+
+  // find the correct book in the dummy array
+  const bookISBNFinder = (isbn) => {
+    dummyData.findIndex((book) => book.isbn === isbn);
+  };
+
   return (
     <div className="full-site-container">
       <Header />
@@ -74,13 +86,20 @@ function App() {
           // pass dummydata to render the modal.
           // pass closeModal so it can close itself
           displayModal && (
-            <Modal dummyData={dummyData[0]} onCloseModal={closeModal} />
+            <Modal
+              dummyData={dummyData[bookISBNFinder(currentBookISBN)]}
+              onCloseModal={closeModal}
+            />
           )
         }
         {/*Render book. Pass showModal so it shows it when modal is clicked on.
          Pass data for rendering*/}
         {/*<Book onShowModal={showModal} dummyData={dummyData[0]} />*/}
-        <BooksList onShowModal={showModal} booksData={dummyData} />
+        <BooksList
+          onShowModal={showModal}
+          booksData={dummyData}
+          onSetCurrentBook={onSetCurrentBook}
+        />
       </Body>
     </div>
   );
