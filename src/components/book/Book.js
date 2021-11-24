@@ -12,7 +12,7 @@ function Book(props) {
   const clickHandler = () => {
     console.log(props.isbn);
     props.onSetCurrentBook(props.isbn);
-    props.onShowModal();
+    props.onToggleModal();
   };
 
   return (
