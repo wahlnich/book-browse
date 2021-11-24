@@ -1,0 +1,3 @@
+--Pull everything but ISBN from OpenLibrary API to render the collection.
+--Turn it into a multi-page SPA using React Router
+--Implement Login
