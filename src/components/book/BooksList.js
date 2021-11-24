@@ -10,7 +10,8 @@ export default function BooksList(props) {
       title={book.title}
       author={book.author}
       description={book.description}
-      onShowModal={props.onShowModal}
+      onToggleModal={props.onToggleModal}
+      onSetCurrentBook={props.onSetCurrentBook}
     />
   ));
 
