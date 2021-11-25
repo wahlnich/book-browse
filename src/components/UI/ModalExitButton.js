@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Button.module.css';
+import classes from './ModalExitButton.module.css';
 
-export default function Button(props) {
+export default function ModalExitButton(props) {
   return (
     <button className={classes['close-button']} onClick={props.onToggleModal}>
-      Close
+      {props.label}
     </button>
   );
 }

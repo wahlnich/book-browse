@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import classes from './Modal.module.css';
 
-import Button from '../UI/Button';
+import ModalExitButton from '../UI/ModalExitButton';
 
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onToggleModal} />;
@@ -11,7 +11,7 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <div className={classes.modal}>
-      <Button onToggleModal={props.onToggleModal} />
+      <ModalExitButton onToggleModal={props.onToggleModal} />
       <h1>{props.data.title}</h1>
       <h2>{props.data.author}</h2>
       <p>{props.data.description}</p>

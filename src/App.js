@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import './App.css';
 
 import Header from './components/navigation/Header';
-import Body from './components/UI/Body';
+import Body from './components/UI/Wrappers/Body';
 import Modal from './components/modal/Modal';
 import BooksList from './components/book/BooksList';
 import AppContext from './store/app-context';
